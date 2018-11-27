@@ -143,18 +143,18 @@ Generic_nRF51822_16KB.bootloader.tool=openocd
 #Generic_nRF51822_16KB.bootloader.bootloader_file=bootloader.hex
 
 Generic_nRF51822_16KB.menu.lfclk.lfxo=Crystal Oscillator
-#Generic_nRF51822_16KB.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+Generic_nRF51822_16KB.menu.lfclk.lfxo.build.lfclk_flags=
 Generic_nRF51822_16KB.menu.lfclk.lfxo.bootloader.bootloader_file=bootloader.hex
 Generic_nRF51822_16KB.menu.lfclk.lfrc=RC Oscillator
-#Generic_nRF51822_16KB.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+Generic_nRF51822_16KB.menu.lfclk.lfrc.build.lfclk_flags=-DTARGET_NRF_LFCLK_RC
 Generic_nRF51822_16KB.menu.lfclk.lfrc.bootloader.bootloader_file=bootloader_no_xtal.hex
 
 Generic_nRF51822_16KB.build.mcu=cortex-m0
 Generic_nRF51822_16KB.build.f_cpu=16000000
 Generic_nRF51822_16KB.build.usb_product="Arduino RBL"
-Generic_nRF51822_16KB.build.board=RBL_nRF51822
+Generic_nRF51822_16KB.build.board=GENERIC_nRF51822
 Generic_nRF51822_16KB.build.core=RBL_nRF51822
-Generic_nRF51822_16KB.build.variant=BLE_Nano
+Generic_nRF51822_16KB.build.variant=GENERIC_nRF51822
 Generic_nRF51822_16KB.build.extra_flags=-mthumb
 Generic_nRF51822_16KB.build.ldscript=linker_scripts/gcc/RBL_nRF51822.ld
 Generic_nRF51822_16KB.build.ble_api_include="-I{runtime.platform.path}/cores/RBL_nRF51822/ble-master" "-I{runtime.platform.path}/cores/RBL_nRF51822/ble-master/ble/services" "-I{runtime.platform.path}/cores/RBL_nRF51822/ble-master/source" "-I{runtime.platform.path}/cores/RBL_nRF51822/ble-master/source/services"
@@ -181,18 +181,18 @@ Generic_nRF51822_32KB.bootloader.tool=openocd
 #Generic_nRF51822_32KB.bootloader.bootloader_file=bootloader.hex
 
 Generic_nRF51822_32KB.menu.lfclk.lfxo=Crystal Oscillator
-#Generic_nRF51822_32KB.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+Generic_nRF51822_32KB.menu.lfclk.lfxo.build.lfclk_flags=
 Generic_nRF51822_32KB.menu.lfclk.lfxo.bootloader.bootloader_file=bootloader.hex
 Generic_nRF51822_32KB.menu.lfclk.lfrc=RC Oscillator
-#Generic_nRF51822_32KB.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+Generic_nRF51822_32KB.menu.lfclk.lfrc.build.lfclk_flags=-DTARGET_NRF_LFCLK_RC
 Generic_nRF51822_32KB.menu.lfclk.lfrc.bootloader.bootloader_file=bootloader_no_xtal.hex
 
 Generic_nRF51822_32KB.build.mcu=cortex-m0
 Generic_nRF51822_32KB.build.f_cpu=16000000
 Generic_nRF51822_32KB.build.usb_product="Arduino RBL"
-Generic_nRF51822_32KB.build.board=RBL_nRF51822
+Generic_nRF51822_32KB.build.board=GENERIC_nRF51822_32KB
 Generic_nRF51822_32KB.build.core=RBL_nRF51822
-Generic_nRF51822_32KB.build.variant=BLE_Nano_32KB
+Generic_nRF51822_32KB.build.variant=GENERIC_nRF51822_32KB
 Generic_nRF51822_32KB.build.extra_flags=-mthumb
 Generic_nRF51822_32KB.build.ldscript=linker_scripts/gcc/RBL_nRF51822.ld
 Generic_nRF51822_32KB.build.ble_api_include="-I{runtime.platform.path}/cores/RBL_nRF51822/ble-master" "-I{runtime.platform.path}/cores/RBL_nRF51822/ble-master/ble/services" "-I{runtime.platform.path}/cores/RBL_nRF51822/ble-master/source" "-I{runtime.platform.path}/cores/RBL_nRF51822/ble-master/source/services"

@@ -91,13 +91,17 @@ uint32_t analogRead(uint32_t pin)
     PinName     nrf_pin;
     uint32_t pValue, value;
 
-    nrf_pin = Pin_nRF51822_to_Arduino(pin);
+    //nrf_pin = Pin_nRF51822_to_Arduino(pin);
+    nrf_pin = Pin_nRF51822_to_Analog(pin);
     MBED_ASSERT(nrf_pin != (PinName)NC);
 
-    if((uint32_t)nrf_pin > 7 || (uint32_t)nrf_pin == 0)
+    //if((uint32_t)nrf_pin > 7 || (uint32_t)nrf_pin == 0)
+    if((uint32_t)nrf_pin > 8) {
         return 0xFFFF;
+    }
 
-    pValue = (1 << ((uint32_t)nrf_pin + 1));
+    //pValue = (1 << ((uint32_t)nrf_pin + 1));
+    pValue = (1 << ((uint32_t)nrf_pin));
     NRF_ADC->CONFIG = ( ADC_CONFIG_RES_10bit << ADC_CONFIG_RES_Pos) |
                       ( analogReference_inpsel_type << ADC_CONFIG_INPSEL_Pos) |
                       ( analogReference_ref_type << ADC_CONFIG_REFSEL_Pos) |

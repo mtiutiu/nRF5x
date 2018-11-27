@@ -34,6 +34,10 @@ PinName Pin_nRF51822_to_Arduino(uint32_t pin)
 {
     PinName return_pin = (PinName)NC;
 
+  #ifdef GENERIC_NRF51822
+    return (PinName) pin;
+  #endif
+
 #ifdef RBL_NRF51822
     switch(pin)
     {
@@ -100,4 +104,19 @@ PinName Pin_nRF51822_to_Arduino(uint32_t pin)
 #endif
 
     return (return_pin);
+}
+
+PinName Pin_nRF51822_to_Analog(uint32_t pin)
+{
+	PinName return_pin = (PinName)NC;
+ 	#ifdef GENERIC_NRF51822
+		switch(pin)
+		{
+			case 26 : return_pin = P0_0; break;
+			case 27 : return_pin = P0_1; break;
+			default : return_pin = (PinName)NC;break;
+		}
+		return return_pin;
+	#endif
+ 	return (PinName) ((uint32_t)Pin_nRF51822_to_Arduino(pin) + 1);
 }
